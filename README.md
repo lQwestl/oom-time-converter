@@ -11,7 +11,7 @@
 Склонируйте репозиторий и дайте права на запуск:
 
 ```bash
-git clone https://github.com/<your-repo>/oom-time-converter.git
+git clone [https://github.com/<your-repo>/oom-time-converter.git](https://github.com/lQwestl/oom-time-converter.git)
 cd oom-time-converter
 chmod +x oom_time.sh
 ```
