@@ -13,7 +13,7 @@
 ```bash
 git clone https://github.com/lQwestl/oom-time-converter.git
 cd oom-time-converter
-chmod +x oom_time.sh
+chmod +x oom_time_linux.sh && chmod +x oom_time_mac.sh
 ```
 
 # Скрипт принимает два аргумента:
