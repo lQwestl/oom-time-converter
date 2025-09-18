@@ -92,3 +92,8 @@ OOM Time (MSK): 2025-08-26 13:18:21 MSK
 - `Europe/Berlin`
 - `Asia/Almaty`
 - другие зоны из базы tzdata
+
+## Вывод последней загрузки из гостя
+```bash
+date -d "$(</proc/uptime awk '{print $1}') seconds ago"
+```
