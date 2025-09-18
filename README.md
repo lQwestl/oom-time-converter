@@ -75,6 +75,9 @@ OOM Time (MSK): 2025-08-26 13:18:21 MSK
 - cloud-init логов
 - команды `last reboot`
 - системных логов загрузки
+- `date -d "$(</proc/uptime awk '{print $1}') seconds ago"`
+
+  
 
 **Строка лога** — пример из dmesg, kern.log или syslog:
 
@@ -92,8 +95,3 @@ OOM Time (MSK): 2025-08-26 13:18:21 MSK
 - `Europe/Berlin`
 - `Asia/Almaty`
 - другие зоны из базы tzdata
-
-## Вывод последней загрузки из гостя
-```bash
-date -d "$(</proc/uptime awk '{print $1}') seconds ago"
-```
