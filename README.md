@@ -41,6 +41,33 @@ chmod +x oom_time_linux.sh && chmod +x oom_time_mac.sh
 Лог: [25177317.860607] Memory cgroup out of memory: Killed process 3689775 (php)
 Время OOM (MSK): 2026-06-02 13:15:17 MSK
 ```
+## Настройка для windows
+
+В PowerShell (От Администратора) вводим команду:
+```bash
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+Получаем вывод и соглашаемся (Y):
+```bash
+Изменение политики выполнения
+Политика выполнения защищает компьютер от ненадежных сценариев. Изменение политики выполнения может поставить под
+угрозу безопасность системы, как описано в разделе справки, вызываемом командой about_Execution_Policies и
+расположенном по адресу https:/go.microsoft.com/fwlink/?LinkID=135170 . Вы хотите изменить политику выполнения?
+[Y] Да - Y  [A] Да для всех - A  [N] Нет - N  [L] Нет для всех - L  [S] Приостановить - S  [?] Справка
+(значением по умолчанию является "N"):Y
+```
+Пример запуска и получение вывода:
+```bash
+.\oom_time_windows.ps1 "2025-05-09 10:18:17" "[9417604.415473] I/O error, dev sdb"
+Log: [9417604.415473] I/O error, dev sdb
+OOM Time (MSK): 2025-08-26 13:18:21 MSK
+
+Calculation details:
+VM Start (UTC): 2025-05-09 10:18:17
+Uptime seconds: 9417604
+OOM Time (UTC): 2025-08-26 10:18:21 UTC
+OOM Time (MSK): 2025-08-26 13:18:21 MSK
+```
 
 ## Входные данные
 
